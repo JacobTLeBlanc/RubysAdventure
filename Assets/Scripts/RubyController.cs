@@ -5,8 +5,12 @@ using UnityEngine;
 public class RubyController : MonoBehaviour
 {
     public int maxHealth = 5; // Max health of character
-    public int health { get { return currentHealth; }}
+    public int health { get { return currentHealth; }} // Get method (property)
     int currentHealth; // Var to keep track of current hp
+
+    public float timeInvicible = 2.0f;
+    bool isInvicible;
+    float invicibleTimer;
 
     public float speed = 3.0f; // Speed of character
 
@@ -32,10 +36,30 @@ public class RubyController : MonoBehaviour
         position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2d.MovePosition(position); // Set our pos to new pos
+
+        if (isInvicible)
+        {
+            invicibleTimer -= Time.deltaTime;
+            if (invicibleTimer < 0)
+            {
+                isInvicible = false;
+            }
+        }
     }
 
     public void ChangeHealth(int amount)
     {
+        if (amount < 0) 
+        {
+            if (isInvicible)
+            {
+                return;
+            }
+
+            isInvicible = true;
+            invicibleTimer = timeInvicible;
+        }
+
         currentHealth = Mathf.Clamp(currentHealth + amount, 0 , maxHealth); // Make sure health is between 0 and 5
         Debug.Log(currentHealth + "/" + maxHealth);
     }
