@@ -297,4 +297,5 @@
 /define:UNITY_TEAM_LICENSE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+"Assets/Scripts/HealthCollectible.cs"
 "Assets/Scripts/RubyController.cs"
