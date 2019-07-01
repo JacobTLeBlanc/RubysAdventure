@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4501099601712859966}
   - component: {fileID: 7827213915256056542}
   - component: {fileID: -925092062827000552}
+  - component: {fileID: -1887002176967900848}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 46f8a2f690b0e3051ac39525d47abff6, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 651c4abeb0812e74685da0e5a31c8dff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,18 +117,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013047218, y: -0.8002324}
+  m_Offset: {x: 0.013047218, y: 0.4101429}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1333334, y: 2.1333334}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.7069987, y: 1.7053334}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7329273, y: 0.5328684}
+  m_Size: {x: 0.7329273, y: 0.73766327}
   m_EdgeRadius: 0
 --- !u!114 &-925092062827000552
 MonoBehaviour:
@@ -144,3 +145,22 @@ MonoBehaviour:
   speed: 3
   changeTime: 3
   vertical: 0
+--- !u!95 &-1887002176967900848
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872830810050187679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe1a138973a08b6bba4b7e8ec864552e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
