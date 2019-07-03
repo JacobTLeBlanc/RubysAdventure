@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     float timer; // A timer
     int direction = 1; // Current direction
     public bool vertical; // If direction is vertical
+    bool broken = true;
 
     Rigidbody2D rigidbody2d;
     Animator animator;
@@ -25,6 +26,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!broken)
+        {
+            return;
+        }
+
         timer -= Time.deltaTime; // Remove time that passed
 
         if (timer < 0)
@@ -57,5 +63,12 @@ public class EnemyController : MonoBehaviour
         {
             player.ChangeHealth(-1);
         }
+    }
+
+    public void Fix()
+    {
+        broken = false;
+        rigidbody2d.simulated = false;
+        animator.SetTrigger("Fixed");
     }
 }
