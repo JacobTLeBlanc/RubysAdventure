@@ -100,6 +100,8 @@ MonoBehaviour:
   speed: 3
   projectilePrefab: {fileID: 5183722840017792976, guid: 7f58a3fa683cb3f63b027852b101f4f9,
     type: 3}
+  hitEffect: {fileID: 8990974370845974141, guid: 23dec340f9b94729fb39bfb708e2f7cd,
+    type: 3}
 --- !u!50 &1675129420740392815
 Rigidbody2D:
   serializedVersion: 4

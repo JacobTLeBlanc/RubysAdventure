@@ -18,6 +18,7 @@ public class RubyController : MonoBehaviour
     Animator animator; // Animator 
     Vector2 lookDirection = new Vector2(1,0); // Current direction
     public GameObject projectilePrefab;
+    public ParticleSystem hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +82,7 @@ public class RubyController : MonoBehaviour
             animator.SetTrigger("Hit");
             isInvicible = true;
             invicibleTimer = timeInvicible;
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0 , maxHealth); // Make sure health is between 0 and 5

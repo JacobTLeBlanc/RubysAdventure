@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HealthCollectible : MonoBehaviour
 {
+    public ParticleSystem healthEffect;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         // Get Ruby Script as a variable
@@ -14,6 +16,7 @@ public class HealthCollectible : MonoBehaviour
             if (controller.health < controller.maxHealth)
             {
                 controller.ChangeHealth(1);
+                Instantiate(healthEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }    
         }
