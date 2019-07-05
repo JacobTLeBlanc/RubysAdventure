@@ -304,3 +304,4 @@
 "Assets/Scripts/HealthCollectible.cs"
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/RubyController.cs"
+"Assets/Scripts/UIHealthBar.cs"
